@@ -419,7 +419,7 @@ const questionData = {
         { question: "Which principle advises against moving the head and body at the exact same moment, promoting offset movements?", options: ["Secondary Action", "Solid Drawing", "Straight Ahead Action", "Exaggeration"], correct: 0, category: "Animation Degree", explanation: "Secondary Action/Overlapping Action introduces more complex, realistic motion." },
         { question: "What does 'Rigging' typically involve in a 3D pipeline?", options: ["Painting textures onto a model", "Creating the geometry (mesh) of a character", "Building the internal joint structure and control systems for articulation", "Compositing rendered passes"], correct: 2, category: "Animation Degree", explanation: "Rigging is the technical process of preparing a model for animation." },
         { question: "The term for drawing animation sequentially from the first frame to the last is:", options: ["Pose to Pose", "Blocking", "Straight Ahead Action", "Keyframing"], correct: 2, category: "Animation Degree", explanation: "Straight Ahead Action is good for spontaneous, fluid motion like fire or water." },
-        { question: "What does the $\\text{Alpha Channel}$ in an image or video file primarily store?", options: ["Color information (RGB)", "Lighting data", "Depth information", "Transparency information"], correct: 3, category: "Animation Degree", explanation: "The Alpha Channel determines the opacity or transparency of the image pixels." },
+        { question: "What does the \\text{Alpha Channel} in an image or video file primarily store?", options: ["Color information (RGB)", "Lighting data", "Depth information", "Transparency information"], correct: 3, category: "Animation Degree", explanation: "The Alpha Channel determines the opacity or transparency of the image pixels." },
         { question: "Which tool is commonly used to adjust the speed of animation curves in digital software (like Maya, Blender, or After Effects)?", options: ["Timeline", "Node Editor", "Graph Editor (Dope Sheet)", "Outliner"], correct: 2, category: "Animation Degree", explanation: "The Graph Editor (or Curve Editor) allows precise control over interpolation and timing." },
         { question: "What is the primary difference between a 'Keyframe' and an 'Inbetween'?", options: ["Keyframes are drawn by the lead animator; Inbetweens by assistants", "Keyframes are movement start/end points; Inbetweens are the frames between them", "Keyframes contain color; Inbetweens are line art", "Keyframes are for 3D; Inbetweens are for 2D"], correct: 1, category: "Animation Degree", explanation: "This is the foundational distinction between the 'Pose to Pose' method." },
         { question: "The concept of reducing a complex 3D shape into simple geometric forms (spheres, cubes) before drawing is related to which principle?", options: ["Solid Drawing", "Appeal", "Staging", "Arc"], correct: 0, category: "Animation Degree", explanation: "Solid Drawing emphasizes drawing in 3D space, focusing on volume and weight." },
@@ -602,7 +602,7 @@ function filterQuestions() {
         },
         "Aptitude & Reasoning": "EASY_APTITUDE",
         "General Knowledge": "EASY_GK",
-        "Financial & Business": "EASY_FINANCE"
+        "ANIMATION": "EASY_ANIMATION"
     };
 
     selectedCategories.forEach(category => {
@@ -634,7 +634,7 @@ function filterQuestions() {
         "FINAL_CS_GENERAL", "FINAL_CS_C", "FINAL_CS_PYTHON", "FINAL_CS_JAVASCRIPT", "FINAL_CS_JAVA",
         "FINAL_APTITUDE", 
         "FINAL_GK", 
-        "FINAL_FINANCE"
+        "FINAL_ANIMATION"
     ];
     
     const TOTAL_FINAL_QUESTIONS = 20;
