@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CS & Aptitude Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <div id="welcome-screen" class="screen">
+            <h1 class="main-title">🧠 Personalized Tech Quiz 💡</h1>
+            <div class="rules-card">
+                <h2>Game Rules:</h2>
+                <ul>
+                    <li>You will first select your preferred **Categories** and **Programming Languages**.</li>
+                    <li>**Round 1 (Qualification):** 10 questions drawn randomly from your selections. **Required: 7/10.**</li>
+                    <li>**Round 2 (Final - Hard):** 20 questions, mixed categories (5 questions per main category: CS, Aptitude, GK, Finance). **Required: 15/20.**</li>
+                    <li>If you reach the required score in Round 1, you pass immediately to the Final Round.</li>
+                </ul>
+            </div>
+            <button id="start-btn" class="btn primary-btn">Start Selection</button>
+        </div>
+
+        <div id="category-select-screen" class="screen hidden">
+            <h1 class="main-title">🎯 Customize Your Quiz</h1>
+
+            <div class="selection-group">
+                <h2>1. Select Categories:</h2>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="Computer Science" id="cs-category" checked> Computer Science / Programming
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="Aptitude & Reasoning" checked> Aptitude & Reasoning
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="General Knowledge" checked> General Knowledge
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category" value="ANIMATION" checked> Animation
+                    </label>
+                </div>
+            </div>
+
+            <div class="selection-group" id="language-selection-group">
+                <h2>2. Select Languages (CS Only):</h2>
+                <p class="hint">Questions related to these languages will be included.</p>
+                <div class="checkbox-group grid-cols-5">
+                    <label class="checkbox-label"><input type="checkbox" name="language" value="C" checked> C</label>
+                    <label class="checkbox-label"><input type="checkbox" name="language" value="Python" checked> Python</label>
+                    <label class="checkbox-label"><input type="checkbox" name="language" value="JavaScript" checked> JavaScript</label>
+                    <label class="checkbox-label"><input type="checkbox" name="language" value="Java" checked> Java</label>
+                    <label class="checkbox-label"><input type="checkbox" name="language" value="General-CS" checked> General CS</label>
+                </div>
+            </div>
+
+            <button id="start-quiz-btn" class="btn primary-btn">Start Quiz</button>
+        </div>
+        
+        <div id="quiz-screen" class="screen hidden">
+            <div class="header">
+                <div class="header-item">Level: <span id="current-level">1 (Easy)</span></div>
+                <div class="header-item timer-display" id="timer">Time: 30s</div>
+            </div>
+            <div class="subheader">
+                <div class="score-display">Score: <span id="level-score">0</span> / <span id="level-required">7</span> (Required)</div>
+                <div class="question-count">Q: <span id="question-num">1</span>/<span id="total-questions">10</span></div>
+            </div>
+            
+            <div id="question-container">
+                <p id="question-category" class="category-display"></p>
+                <h2 id="question">Question goes here</h2>
+                <div id="options-container" class="options-grid">
+                    </div>
+            </div>
+            
+            <div id="feedback" class="feedback"></div>
+            <button id="next-btn" class="btn secondary-btn hidden">Next Question</button>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h1 id="result-title" class="main-title">Quiz Complete!</h1>
+            <div id="win-animation" class="win-animation hidden">You Win the Game!</div>
+            <div id="result-details" class="rules-card"></div>
+            <button id="restart-btn" class="btn primary-btn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
